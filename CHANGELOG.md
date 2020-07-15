@@ -1,3 +1,7 @@
+## 0.0.5
+
+- Removed dependencies on path
+
 ## 0.0.4
 
 - Commented public apis.
