@@ -25,7 +25,9 @@ class PaymentPage extends RPCMethodEntity {
   }
 
   Future<PaymentPageInitializeResponse> getDetails(
-      String payment_page_id) async {}
+      String payment_page_id) async {
+    throw UnimplementedError();
+  }
 
   void update() async {}
 }

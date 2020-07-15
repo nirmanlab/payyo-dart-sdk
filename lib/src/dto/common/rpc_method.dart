@@ -75,7 +75,7 @@ const _RPCMethodEnumMap = {
 };
 
 String rpcMethodStringValue(RPCMethod rpcMethod) {
-  String val = _RPCMethodEnumMap[rpcMethod];
+  var val = _RPCMethodEnumMap[rpcMethod];
   if (val == null) {
     throw Exception('no value found in _RPCMethodEnumMap for $rpcMethod');
   }

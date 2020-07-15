@@ -37,6 +37,7 @@ class PaymentPageInitializeResponseResult
           Map<String, dynamic> jsonMap) =>
       _$PaymentPageInitializeResponseResultFromJson(jsonMap);
 
+  @override
   Map<String, dynamic> toJson() =>
       _$PaymentPageInitializeResponseResultToJson(this);
 }

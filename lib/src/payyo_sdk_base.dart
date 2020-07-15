@@ -6,11 +6,11 @@ class PayyoMobileSDK {
 
   PayyoMobileSDK._();
 
-  static PayyoMobileSDK _instance = PayyoMobileSDK._();
+  static final PayyoMobileSDK _instance = PayyoMobileSDK._();
 
-  static get instance => _instance;
+  static PayyoMobileSDK get instance => _instance;
 
-  static get configurations => _instance._configurations;
+  static PayyoAPIConfiguration get configurations => _instance._configurations;
 
   static set configurations(PayyoAPIConfiguration payyoAPIConfiguration) {
     _instance._configurations = payyoAPIConfiguration;

@@ -20,18 +20,18 @@ void main() {
 
     test('Encode value', () {
       var body = <String, dynamic>{
-        "jsonrpc": "2.0",
-        "id": 1,
-        "method": "paymentPage.initialize",
-        "params": {
-          "merchant_id": 18240,
-          "merchant_reference": "uniqueIdentifier_1",
-          "currency": "USD",
-          "amount": 50,
-          "return_urls": {
-            "success": "http://localhost/success",
-            "error": "http://localhost/error",
-            "abort": "http://localhost/abort"
+        'jsonrpc': '2.0',
+        'id': 1,
+        'method': 'paymentPage.initialize',
+        'params': {
+          'merchant_id': 18240,
+          'merchant_reference': 'uniqueIdentifier_1',
+          'currency': 'USD',
+          'amount': 50,
+          'return_urls': {
+            'success': 'http://localhost/success',
+            'error': 'http://localhost/error',
+            'abort': 'http://localhost/abort'
           }
         }
       };

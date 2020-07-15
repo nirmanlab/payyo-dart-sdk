@@ -1,11 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:payyo_sdk/src/dto/common/customer.dart';
-import 'package:payyo_sdk/src/dto/common/json_rpc_request.dart';
 import 'package:payyo_sdk/src/dto/common/payment/extra_charge.dart';
 import 'package:payyo_sdk/src/dto/common/payment/payment_plan.dart';
 import 'package:payyo_sdk/src/dto/common/payment/styling.dart';
 import 'package:payyo_sdk/src/dto/common/return_urls.dart';
-import 'package:payyo_sdk/src/dto/common/rpc_method.dart';
 import 'package:payyo_sdk/src/dto/common/web_hook.dart';
 import 'package:payyo_sdk/src/dto/request/request_params.dart';
 
@@ -47,6 +45,7 @@ class PaymentPageInitializeRequestParams extends RequestParams {
           Map<String, dynamic> jsonMap) =>
       _$PaymentPageInitializeRequestParamsFromJson(jsonMap);
 
+  @override
   Map<String, dynamic> toJson() =>
       _$PaymentPageInitializeRequestParamsToJson(this);
 }
@@ -60,6 +59,8 @@ PaymentPlan paymentPlanFromJson(Map<String, dynamic> jsonMap) {
   if (jsonMap != null) {
     return PaymentPlan.fromJson(jsonMap);
   }
+
+  return null;
 }
 
 String extraChargesToJson(List<ExtraCharge> extraCharge) {
@@ -74,4 +75,6 @@ List<ExtraCharge> extraChargesFromJson(List listOfJsonMap) {
   if (listOfJsonMap != null && listOfJsonMap.isNotEmpty) {
     return listOfJsonMap.map((e) => ExtraCharge.fromJson(e)).toList();
   }
+
+  return null;
 }

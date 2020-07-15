@@ -11,7 +11,7 @@ import 'package:payyo_sdk/src/mixins/auth_header_value_encoder_mixin.dart';
 import 'package:payyo_sdk/src/payyo_sdk_base.dart';
 
 abstract class RPCMethodEntity with AuthHeaderValueEncoderMixin {
-  PayyoAPIConfiguration _payyoAPIConfiguration;
+  final PayyoAPIConfiguration _payyoAPIConfiguration;
 
   RPCMethodEntity()
       : assert(PayyoMobileSDK.configurations != null),
@@ -32,7 +32,7 @@ abstract class RPCMethodEntity with AuthHeaderValueEncoderMixin {
   Future<Response> executeRPCRequest(
       RPCMethod rpcMethod, RequestParams requestParams,
       {int id = 1}) {
-    String requestBody =
+    var requestBody =
         jsonEncode(prepareRequestBody(rpcMethod, requestParams, id: id));
 
     var authHeaderValue = commonHeadersWithAuthHeader(
