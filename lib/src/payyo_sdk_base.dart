@@ -7,10 +7,12 @@ class PayyoMobileSDK {
 
   static final PayyoMobileSDK _instance = PayyoMobileSDK._();
 
-  static PayyoMobileSDK get instance => _instance;
-
+  /// [PayyoAPIConfiguration] getter which returns the singleton [PayyoMobileSDK]
+  /// instance's [PayyoAPIConfiguration].
   static PayyoAPIConfiguration get configurations => _instance._configurations;
 
+  /// [PayyoAPIConfiguration] setter which sets the singleton [PayyoMobileSDK]
+  /// instance's [PayyoAPIConfiguration].
   static set configurations(PayyoAPIConfiguration payyoAPIConfiguration) {
     _instance._configurations = payyoAPIConfiguration;
   }

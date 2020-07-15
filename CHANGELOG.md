@@ -1,3 +1,7 @@
+## 0.0.4
+
+- Commented public apis.
+
 ## 0.0.3
 
 - Added bit more description, provided example.

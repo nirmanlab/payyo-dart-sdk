@@ -13,7 +13,7 @@ void main() async {
     ..secreteKey = 'sec_74a3d04034736d7674e20e059714';
 
   //Create instance of RPC Method Entity.
-  PaymentPage paymentPage = PaymentPage();
+  var paymentPage = PaymentPage();
 
   var returnUrls = ReturnUrls()
     ..success = 'http://localhost/success'
