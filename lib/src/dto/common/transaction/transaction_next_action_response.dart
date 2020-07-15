@@ -9,7 +9,8 @@ class TransactionNextActionResponse extends JsonRPCResponse {
 
   TransactionNextActionResponse();
 
-  factory TransactionNextActionResponse.fromJson(Map<String, dynamic> jsonMap) =>
+  factory TransactionNextActionResponse.fromJson(
+          Map<String, dynamic> jsonMap) =>
       _$TransactionNextActionResponseFromJson(jsonMap);
 
   Map<String, dynamic> toJson() => _$TransactionNextActionResponseToJson(this);
@@ -23,8 +24,10 @@ class TransactionNextActionResponseResult {
 
   TransactionNextActionResponseResult();
 
-  factory TransactionNextActionResponseResult.fromJson(Map<String, dynamic> jsonMap) =>
+  factory TransactionNextActionResponseResult.fromJson(
+          Map<String, dynamic> jsonMap) =>
       _$TransactionNextActionResponseResultFromJson(jsonMap);
 
-  Map<String, dynamic> toJson() => _$TransactionNextActionResponseResultToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$TransactionNextActionResponseResultToJson(this);
 }

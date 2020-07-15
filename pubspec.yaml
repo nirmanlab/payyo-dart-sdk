@@ -1,6 +1,6 @@
 name: payyo_sdk
-description: Dart SDK for Payyo payment gateway
-version: 0.0.2
+description: SDK for payyo payment gateway. This SDK covers differnet RPC calls wrapped inside RPC method Entity.
+version: 0.0.3
 homepage: https://github.com/nirman-lab/payyo-dart-sdk
 
 environment:

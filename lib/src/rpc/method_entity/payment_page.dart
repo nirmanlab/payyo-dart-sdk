@@ -6,10 +6,12 @@ import 'package:payyo_sdk/src/dto/response/payment_page_initialize_response.dart
 import 'package:payyo_sdk/src/rpc/payyo_method_entity.dart';
 
 class PaymentPage extends RPCMethodEntity {
-
   Future<PaymentPageInitializeResponse> initialize(
-      PaymentPageInitializeRequestParams requestParams, {int id = 1}) async {
-    var response = await executeRPCRequest(RPCMethod.paymentPage_initialize, requestParams, id: id);
+      PaymentPageInitializeRequestParams requestParams,
+      {int id = 1}) async {
+    var response = await executeRPCRequest(
+        RPCMethod.paymentPage_initialize, requestParams,
+        id: id);
 
     if (isOk(response)) {
       var jsonDecodedMap = jsonDecode(response.body);

@@ -26,11 +26,13 @@ class Transaction extends RPCMethodEntity {
     throw UnimplementedError();
   }
 
-  Future<TransactionNextActionResponse> getNextAction(String transactionId, [int id = 1]) async {
+  Future<TransactionNextActionResponse> getNextAction(String transactionId,
+      [int id = 1]) async {
     assert(transactionId != null);
 
     var response = await executeRPCRequest(RPCMethod.transaction_getNextAction,
-        TransactionGetNextActionParams()..transaction_id = transactionId, id: id);
+        TransactionGetNextActionParams()..transaction_id = transactionId,
+        id: id);
 
     if (isOk(response)) {
       var jsonDecodedMap = jsonDecode(response.body);
@@ -44,11 +46,9 @@ class Transaction extends RPCMethodEntity {
 
     throw Exception(
         'paymentPage.initialize failed, {statusCode: ${response.statusCode}}, {body: ${response.body}}');
-
   }
 
-  void initialize() {
-  }
+  void initialize() {}
 
   void initiate() {
     throw UnimplementedError();
