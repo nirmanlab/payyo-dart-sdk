@@ -25,4 +25,4 @@ main() async {
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/MilanSavaliya/payyo-dart-sdk/issues
+[tracker]: https://github.com/nirman-lab/payyo-dart-sdk/issues
