@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:payyo_sdk/src/dto/common/rpc_method.dart';
 import 'package:payyo_sdk/src/dto/request/payment_page/payment_page_initialize_request_params.dart';
-import 'package:payyo_sdk/src/dto/response/payment_page_initialize_response.dart';
-import 'package:payyo_sdk/src/rpc/payyo_method_entity.dart';
+import 'package:payyo_sdk/src/dto/response/payment/payment_page_initialize_response.dart';
+import 'package:payyo_sdk/src/rpc/method_entity/payyo_method_entity.dart';
 
 class PaymentPage extends RPCMethodEntity {
   Future<PaymentPageInitializeResponse> initialize(

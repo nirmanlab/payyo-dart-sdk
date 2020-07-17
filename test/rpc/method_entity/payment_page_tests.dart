@@ -1,7 +1,7 @@
 import 'package:payyo_sdk/payyo_sdk.dart';
 import 'package:payyo_sdk/src/config/payyo_api_configuration.dart';
 import 'package:payyo_sdk/src/dto/common/json_rpc_request_exception.dart';
-import 'package:payyo_sdk/src/dto/common/payment/payment_plan.dart';
+import 'package:payyo_sdk/src/dto/common/payment_plan.dart';
 import 'package:payyo_sdk/src/dto/common/return_urls.dart';
 import 'package:payyo_sdk/src/dto/request/payment_page/payment_page_initialize_request_params.dart';
 import 'package:payyo_sdk/src/rpc/method_entity/payment_page.dart';

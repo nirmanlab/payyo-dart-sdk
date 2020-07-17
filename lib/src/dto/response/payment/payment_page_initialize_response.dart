@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:payyo_sdk/src/dto/common/common.dart';
 import 'package:payyo_sdk/src/dto/common/customer.dart';
 import 'package:payyo_sdk/src/dto/common/json_rpc_response.dart';
-import 'package:payyo_sdk/src/dto/common/payment/payment_plan.dart';
-import 'package:payyo_sdk/src/dto/common/payment/styling.dart';
+import 'package:payyo_sdk/src/dto/common/payment_plan.dart';
 import 'package:payyo_sdk/src/dto/common/return_urls.dart';
 import 'package:payyo_sdk/src/dto/common/web_hook.dart';
 import 'package:payyo_sdk/src/dto/request/payment_page/payment_page_initialize_request_params.dart';

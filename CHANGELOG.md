@@ -1,3 +1,15 @@
+## 0.0.8
+
+- Made dto, and config publicly available.
+
+## 0.0.7
+
+- Exposed payment page apis.
+
+## 0.0.6
+
+- downgraded crypto dependency to 2.1.4
+
 ## 0.0.5
 
 - Removed dependencies on path

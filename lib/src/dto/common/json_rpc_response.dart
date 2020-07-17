@@ -1,15 +1,16 @@
+/// represents abstract [JsonRPCResponse]
 abstract class JsonRPCResponse {
   String jsonrpc = '2.0';
   int id;
 }
 
-abstract class JsonRPCResponseResult {}
-
+/// represents JSON RPC Error
 class JsonRPCError {
   int code;
   String message;
 }
 
+/// represents error response when api fails
 class JsonRPCErrorResponse extends JsonRPCResponse {
   JsonRPCError error;
 

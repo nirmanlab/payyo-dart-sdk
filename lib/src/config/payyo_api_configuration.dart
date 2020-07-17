@@ -1,3 +1,4 @@
+/// pojo to contain configurations
 class PayyoAPIConfiguration {
   String endpoint;
   String version;

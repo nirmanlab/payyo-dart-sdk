@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:payyo_sdk/src/dto/common/rpc_method.dart';
-import 'package:payyo_sdk/src/dto/common/transaction/transaction_next_action_response.dart';
 import 'package:payyo_sdk/src/dto/request/transaction/transaction_get_next_action_params.dart';
-import 'package:payyo_sdk/src/rpc/payyo_method_entity.dart';
+import 'package:payyo_sdk/src/dto/response/transaction/transaction_next_action_response.dart';
+import 'package:payyo_sdk/src/rpc/method_entity/payyo_method_entity.dart';
 
 class Transaction extends RPCMethodEntity {
   void authorize() {

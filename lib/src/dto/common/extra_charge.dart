@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'extra_charge.g.dart';
 
+/// extra charge pojo
 enum ExtraChargeType {
   @JsonValue('insurance')
   insurance,
@@ -55,4 +56,20 @@ class InsuranceCrossSale extends ExtraCharge {
 
   @override
   Map<String, dynamic> toJson() => _$InsuranceCrossSaleToJson(this);
+}
+
+String extraChargesToJson(List<ExtraCharge> extraCharge) {
+  if (extraCharge != null && extraCharge.isNotEmpty) {
+    return '[${extraCharge.map((e) => e.toJson()).join(',')}]';
+  }
+
+  return null;
+}
+
+List<ExtraCharge> extraChargesFromJson(List listOfJsonMap) {
+  if (listOfJsonMap != null && listOfJsonMap.isNotEmpty) {
+    return listOfJsonMap.map((e) => ExtraCharge.fromJson(e)).toList();
+  }
+
+  return null;
 }

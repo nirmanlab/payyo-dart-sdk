@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'customer.g.dart';
 
+/// customer pojo
 @JsonSerializable(nullable: true)
 class Customer {
   String first_name;

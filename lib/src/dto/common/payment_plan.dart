@@ -113,3 +113,16 @@ class PaymentInstallment {
 
   Map<String, dynamic> toJson() => _$PaymentInstallmentToJson(this);
 }
+
+Map<String, dynamic> paymentPlanToJson(PaymentPlan paymentPlan) {
+  if (paymentPlan == null) return null;
+  return paymentPlan.toJson();
+}
+
+PaymentPlan paymentPlanFromJson(Map<String, dynamic> jsonMap) {
+  if (jsonMap != null) {
+    return PaymentPlan.fromJson(jsonMap);
+  }
+
+  return null;
+}
