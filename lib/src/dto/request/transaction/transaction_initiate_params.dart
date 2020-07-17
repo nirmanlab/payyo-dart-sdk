@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:payyo_sdk/payyo_sdk.dart';
 import 'package:payyo_sdk/src/dto/common/device.dart';
+import 'package:payyo_sdk/src/dto/common/funding_instrument.dart';
 import 'package:payyo_sdk/src/dto/request/transaction/transaction_attribute.dart';
 
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
