@@ -2,11 +2,12 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'return_urls.g.dart';
 
-@JsonSerializable(nullable: true)
+@JsonSerializable(includeIfNull: false)
 class ReturnUrls {
   String success;
   String error;
   String abort;
+  String fail;
 
   ReturnUrls();
 

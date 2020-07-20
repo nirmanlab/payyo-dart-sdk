@@ -1,3 +1,7 @@
+## 0.0.9
+
+- Added support for `transaction.initiate` with various funding instrument.
+
 ## 0.0.8
 
 - Made dto, and config publicly available.

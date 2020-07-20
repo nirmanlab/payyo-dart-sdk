@@ -48,4 +48,3 @@ class PaymentPageInitializeRequestParams extends RequestParams {
   Map<String, dynamic> toJson() =>
       _$PaymentPageInitializeRequestParamsToJson(this);
 }
-

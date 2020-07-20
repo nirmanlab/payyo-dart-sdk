@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:payyo_sdk/payyo_sdk.dart';
 import 'package:payyo_sdk/src/dto/common/rpc_method.dart';
 import 'package:payyo_sdk/src/dto/request/transaction/transaction_get_next_action_params.dart';
 import 'package:payyo_sdk/src/dto/response/transaction/transaction_next_action_response.dart';
@@ -48,10 +49,25 @@ class Transaction extends RPCMethodEntity {
         'paymentPage.initialize failed, {statusCode: ${response.statusCode}}, {body: ${response.body}}');
   }
 
-  void initialize() {}
+  Future<TransactionNextActionResponse> initiate(
+      TransactionInitiateParams requestParams,
+      {int id = 1}) async {
+    var response = await executeRPCRequest(
+        RPCMethod.transaction_initiate, requestParams,
+        id: id);
 
-  void initiate() {
-    throw UnimplementedError();
+    if (isOk(response)) {
+      var jsonMap = jsonDecode(response.body);
+      print(jsonMap);
+      if (isError(jsonMap)) {
+        throwJsonRPCRequestException(jsonMap);
+      } else {
+        return TransactionNextActionResponse.fromJson(jsonMap);
+      }
+    }
+
+    throw Exception(
+        'paymentPage.initialize failed, {statusCode: ${response.statusCode}}, {body: ${response.body}}');
   }
 
   void pay() {

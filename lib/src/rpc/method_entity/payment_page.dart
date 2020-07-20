@@ -14,11 +14,11 @@ class PaymentPage extends RPCMethodEntity {
         id: id);
 
     if (isOk(response)) {
-      var jsonDecodedMap = jsonDecode(response.body);
-      if (isError(jsonDecodedMap)) {
-        throwJsonRPCRequestException(jsonDecodedMap);
+      var jsonMap = jsonDecode(response.body);
+      if (isError(jsonMap)) {
+        throwJsonRPCRequestException(jsonMap);
       } else {
-        return PaymentPageInitializeResponse.fromJson(jsonDecodedMap);
+        return PaymentPageInitializeResponse.fromJson(jsonMap);
       }
     }
 

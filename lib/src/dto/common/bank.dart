@@ -25,3 +25,22 @@ class LastschriftBank extends Bank {
 
   Map<String, dynamic> toJson() => _$LastschriftBankToJson(this);
 }
+
+@JsonSerializable(explicitToJson: true)
+class SofortBank {
+  /// The ISO-3166 2-letter country code of the customer's bank.
+  /// RegExp:
+  /// ```
+  ///   ^[a-zA-Z]{2}$
+  /// ```
+  @JsonKey(required: true)
+  String country_code;
+
+  SofortBank();
+
+  factory SofortBank.fromJson(Map<String, dynamic> jsonMap) =>
+      _$SofortBankFromJson(jsonMap);
+
+  @override
+  Map<String, dynamic> toJson() => _$SofortBankToJson(this);
+}

@@ -68,35 +68,47 @@ PaymentPageInitializeResponseResult
 }
 
 Map<String, dynamic> _$PaymentPageInitializeResponseResultToJson(
-        PaymentPageInitializeResponseResult instance) =>
-    <String, dynamic>{
-      'merchant_id': instance.merchant_id,
-      'merchant_reference': instance.merchant_reference,
-      'description': instance.description,
-      'billing_descriptor': instance.billing_descriptor,
-      'metadata': instance.metadata,
-      'currency': instance.currency,
-      'amount': instance.amount,
-      'customers': instance.customers?.map((e) => e?.toJson())?.toList(),
-      'payment_methods': instance.payment_methods
+    PaymentPageInitializeResponseResult instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('merchant_id', instance.merchant_id);
+  writeNotNull('merchant_reference', instance.merchant_reference);
+  writeNotNull('description', instance.description);
+  writeNotNull('billing_descriptor', instance.billing_descriptor);
+  writeNotNull('metadata', instance.metadata);
+  writeNotNull('currency', instance.currency);
+  writeNotNull('amount', instance.amount);
+  writeNotNull(
+      'customers', instance.customers?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'payment_methods',
+      instance.payment_methods
           ?.map((e) => _$PaymentMethodEnumMap[e])
-          ?.toList(),
-      'create_alias': instance.create_alias,
-      'payment_plan': paymentPlanToJson(instance.payment_plan),
-      'return_urls': instance.return_urls?.toJson(),
-      'styling': instance.styling?.toJson(),
-      'language': instance.language,
-      'webhooks': instance.webhooks?.map((e) => e?.toJson())?.toList(),
-      'value_date': instance.value_date,
-      'is_reusable': instance.is_reusable,
-      'expiration_time': instance.expiration_time,
-      'extra_charges': extraChargesToJson(instance.extra_charges),
-      'payment_page_id': instance.payment_page_id,
-      'checkout_url': instance.checkout_url,
-      'amount_formatted': instance.amount_formatted,
-      'transaction_id': instance.transaction_id,
-      'is_expired': instance.is_expired,
-    };
+          ?.toList());
+  writeNotNull('create_alias', instance.create_alias);
+  writeNotNull('payment_plan', paymentPlanToJson(instance.payment_plan));
+  writeNotNull('return_urls', instance.return_urls?.toJson());
+  writeNotNull('styling', instance.styling?.toJson());
+  writeNotNull('language', instance.language);
+  writeNotNull(
+      'webhooks', instance.webhooks?.map((e) => e?.toJson())?.toList());
+  writeNotNull('value_date', instance.value_date);
+  writeNotNull('is_reusable', instance.is_reusable);
+  writeNotNull('expiration_time', instance.expiration_time);
+  writeNotNull('extra_charges', extraChargesToJson(instance.extra_charges));
+  val['payment_page_id'] = instance.payment_page_id;
+  val['checkout_url'] = instance.checkout_url;
+  val['amount_formatted'] = instance.amount_formatted;
+  val['transaction_id'] = instance.transaction_id;
+  val['is_expired'] = instance.is_expired;
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,

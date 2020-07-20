@@ -16,11 +16,12 @@ class TransactionNextActionResponse extends JsonRPCResponse {
   Map<String, dynamic> toJson() => _$TransactionNextActionResponseToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class TransactionNextActionResponseResult {
   String transaction_id;
   String status;
   String next_action;
+  String redirect_url;
 
   TransactionNextActionResponseResult();
 

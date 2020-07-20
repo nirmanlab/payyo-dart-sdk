@@ -4,6 +4,8 @@ import 'package:payyo_sdk/src/dto/common/device.dart';
 import 'package:payyo_sdk/src/dto/common/funding_instrument.dart';
 import 'package:payyo_sdk/src/dto/request/transaction/transaction_attribute.dart';
 
+part 'transaction_initiate_params.g.dart';
+
 @JsonSerializable(explicitToJson: true, includeIfNull: false)
 class TransactionInitiateParams extends RequestParams {
   int merchant_id;
@@ -15,6 +17,7 @@ class TransactionInitiateParams extends RequestParams {
   int amount;
   bool was_dcc_offered;
   String dcc_quote_reference;
+  @JsonKey(fromJson: fundingInstrumentFromJson, toJson: fundingInstrumentToJson)
   FundingInstrument funding_instrument;
   bool create_alias;
   String value_date;
@@ -34,7 +37,11 @@ class TransactionInitiateParams extends RequestParams {
       toJson: extraChargesToJson)
   List<ExtraCharge> extra_charges;
 
+  TransactionInitiateParams();
+
+  factory TransactionInitiateParams.fromJson(Map<String, dynamic> jsonMap) =>
+      _$TransactionInitiateParamsFromJson(jsonMap);
 
   @override
-  Map<String, dynamic> toJson() {}
+  Map<String, dynamic> toJson() => _$TransactionInitiateParamsToJson(this);
 }

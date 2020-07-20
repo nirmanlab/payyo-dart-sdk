@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'customer.g.dart';
 
 /// customer pojo
-@JsonSerializable(nullable: true)
+@JsonSerializable(nullable: true, explicitToJson: true)
 class Customer {
   String first_name;
   String last_name;
