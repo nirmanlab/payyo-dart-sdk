@@ -1,3 +1,7 @@
+## 0.0.10
+
+- Exported `funding_instruments` to be consumed at client level.
+
 ## 0.0.9
 
 - Added support for `transaction.initiate` with various funding instrument.

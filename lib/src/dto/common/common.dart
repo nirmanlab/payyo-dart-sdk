@@ -2,6 +2,7 @@ export 'bank.dart';
 export 'customer.dart';
 export 'device.dart';
 export 'extra_charge.dart';
+export 'funding_instrument.dart';
 export 'json_rpc_request_exception.dart';
 export 'json_rpc_response.dart';
 export 'lastschrift_holder.dart';
