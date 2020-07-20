@@ -13,7 +13,7 @@ PaymentPageInitializeRequestParams _$PaymentPageInitializeRequestParamsFromJson(
     ..merchant_reference = json['merchant_reference'] as String
     ..description = json['description'] as String
     ..billing_descriptor = json['billing_descriptor'] as String
-    ..metadata = json['metadata']
+    ..metadata = metadataFromJson(json['metadata'] as String)
     ..currency = json['currency'] as String
     ..amount = json['amount'] as int
     ..customers = (json['customers'] as List)
@@ -57,7 +57,7 @@ Map<String, dynamic> _$PaymentPageInitializeRequestParamsToJson(
   writeNotNull('merchant_reference', instance.merchant_reference);
   writeNotNull('description', instance.description);
   writeNotNull('billing_descriptor', instance.billing_descriptor);
-  writeNotNull('metadata', instance.metadata);
+  writeNotNull('metadata', metadataToJson(instance.metadata));
   writeNotNull('currency', instance.currency);
   writeNotNull('amount', instance.amount);
   writeNotNull(

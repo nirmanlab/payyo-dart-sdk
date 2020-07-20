@@ -1,3 +1,9 @@
+## 0.0.11
+
+- Changed metadata type from `dynamic` to `Map<String, dynamic>` 
+- Added `toJson` and `fromJson` utility function for metadata object.
+- Updated `PaymentPageInitializeRequestParams` and `TransactionInitiateParams` with new changes.
+
 ## 0.0.10
 
 - Exported `funding_instruments` to be consumed at client level.
