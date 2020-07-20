@@ -1,3 +1,11 @@
+## 0.0.13
+
+- Fixed Metadata type issue.
+
+## 0.0.12
+
+- resolved static analysis issues.
+
 ## 0.0.11
 
 - Changed metadata type from `dynamic` to `Map<String, dynamic>` 
@@ -13,7 +21,7 @@
 - Added support for `transaction.initiate` with various funding instrument.
 
 ## 0.0.8
-
+mer
 - Made dto, and config publicly available.
 
 ## 0.0.7

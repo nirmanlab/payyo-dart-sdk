@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:payyo_sdk/payyo_sdk.dart';
 import 'package:payyo_sdk/src/dto/common/device.dart';
 import 'package:payyo_sdk/src/dto/common/funding_instrument.dart';
-import 'package:payyo_sdk/src/dto/common/metadata.dart';
 import 'package:payyo_sdk/src/dto/request/transaction/transaction_attribute.dart';
 
 part 'transaction_initiate_params.g.dart';
@@ -13,7 +12,6 @@ class TransactionInitiateParams extends RequestParams {
   String merchant_reference;
   String description;
   String billing_descriptor;
-  @JsonKey(fromJson: metadataFromJson, toJson: metadataToJson)
   Map<String, dynamic> metadata;
   String currency;
   int amount;

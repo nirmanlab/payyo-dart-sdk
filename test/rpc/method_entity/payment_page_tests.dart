@@ -46,6 +46,9 @@ void main() {
           PaymentMethod.direct_debit,
           PaymentMethod.direct_debit
         ]
+        ..metadata = {
+        'name': 'testName'
+        }
         ..language = 'en'
         ..is_reusable = false
         ..payment_plan = paymentPlan;
