@@ -1,6 +1,7 @@
 ## 0.0.15
 
 - Exported payment.dart and transaction_capture_params.dart
+- Added support for runtime js
 
 ## 0.0.14
 

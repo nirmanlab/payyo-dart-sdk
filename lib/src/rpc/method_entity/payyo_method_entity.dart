@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:http/http.dart';
 import 'package:payyo_sdk/src/config/payyo_api_configuration.dart';
@@ -58,7 +57,7 @@ abstract class RPCMethodEntity with AuthHeaderValueEncoderMixin {
   }
 
   bool isOk(Response response) {
-    return response.statusCode == HttpStatus.ok;
+    return response.statusCode == 200;
   }
 
   void throwJsonRPCRequestException(Map<String, dynamic> jsonMap) {
