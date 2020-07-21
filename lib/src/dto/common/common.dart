@@ -11,3 +11,4 @@ export 'return_urls.dart';
 export 'rpc_method.dart';
 export 'styling.dart';
 export 'web_hook.dart';
+export 'payment.dart';

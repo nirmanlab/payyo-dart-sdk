@@ -1,3 +1,7 @@
+## 0.0.15
+
+- Exported payment.dart and transaction_capture_params.dart
+
 ## 0.0.14
 
 - Added support for capturing authorized transaction. 
