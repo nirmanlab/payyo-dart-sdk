@@ -1,6 +1,7 @@
 import 'package:payyo_sdk/payyo_sdk.dart';
 import 'package:payyo_sdk/src/config/payyo_api_configuration.dart';
 import 'package:payyo_sdk/src/dto/common/funding_instrument.dart';
+import 'package:payyo_sdk/src/dto/request/transaction/transaction_capture_params.dart';
 import 'package:payyo_sdk/src/rpc/method_entity/transaction.dart';
 import 'package:test/test.dart';
 
@@ -67,13 +68,22 @@ void main() {
     });
 
     test('transaction.getNextAction returns success response', () async {
-      var transactionId = 'tra_8b78b6094cdf1be1a584b8004885';
+      var transactionId = 'tra_2032da2bf9bc5394d00b3c7c16ff';
       var getActionResponse = await transaction.getNextAction(transactionId);
 
       var result = getActionResponse.result;
       expect(result.transaction_id, equals(transactionId));
       expect(result.status, isNotNull);
       expect(result.next_action, isNotNull);
+    });
+
+    test('transaction.capture returns success response', () async {
+      var transactionId = 'tra_2032da2bf9bc5394d00b3c7c16ff';
+      var response = await transaction.capture(TransactionCaptureParams()..transaction_id = transactionId);
+      var result = response.result;
+      expect(result.transaction_id, equals(transactionId));
+      expect(result.status, isNotNull);
+      expect(result.next_action, isNull);
     });
   });
 }

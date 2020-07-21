@@ -23,6 +23,7 @@ class LastschriftBank extends Bank {
   factory LastschriftBank.fromJson(Map<String, dynamic> jsonMap) =>
       _$LastschriftBankFromJson(jsonMap);
 
+  @override
   Map<String, dynamic> toJson() => _$LastschriftBankToJson(this);
 }
 
@@ -41,6 +42,5 @@ class SofortBank {
   factory SofortBank.fromJson(Map<String, dynamic> jsonMap) =>
       _$SofortBankFromJson(jsonMap);
 
-  @override
   Map<String, dynamic> toJson() => _$SofortBankToJson(this);
 }
