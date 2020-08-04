@@ -6,10 +6,10 @@ import 'package:payyo_sdk/src/rpc/method_entity/payment_page.dart';
 
 void main() async {
   PayyoMobileSDK.configurations = PayyoAPIConfiguration()
-    ..endpoint = 'https://api.sandbox.trekkpay.io'
+    ..endpoint = 'SANDBOX_OR_PRODUCTION_ENDPOINT'
     ..version = 'v2'
-    ..publicKey = 'api_1dae36d204dca5f7c54a81044e7a'
-    ..secreteKey = 'sec_74a3d04034736d7674e20e059714';
+    ..publicKey = 'YOUR_PUBLIC_KEY'
+    ..secreteKey = 'YOUR_SECRETE_KEY';
 
   //Create instance of RPC Method Entity.
   var paymentPage = PaymentPage();
@@ -26,7 +26,7 @@ void main() async {
 
   var requestParams = PaymentPageInitializeRequestParams()
     ..merchant_id = 18240
-    ..merchant_reference = 'uniqueIdentifier_1'
+    ..merchant_reference = DateTime.now().toIso8601String()
     ..currency = 'USD'
     ..amount = 50
     ..return_urls = returnUrls

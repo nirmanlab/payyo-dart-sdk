@@ -1,3 +1,7 @@
+## 0.0.16
+
+- Updated example information.
+
 ## 0.0.15
 
 - Exported payment.dart and transaction_capture_params.dart

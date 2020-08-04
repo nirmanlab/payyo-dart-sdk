@@ -10,10 +10,10 @@ A simple usage example:
 
 main() async {
   PayyoMobileSDK.configurations = PayyoAPIConfiguration()
-          ..endpoint = 'https://api.sandbox.trekkpay.io'
-          ..version = 'v2'
-          ..publicKey = 'api_1dae36d204dca5f7c54a81044e7a'
-          ..secreteKey = 'sec_74a3d04034736d7674e20e059714';
+      ..endpoint = 'SANDBOX_OR_PRODUCTION_ENDPOINT'
+      ..version = 'v2'
+      ..publicKey = 'YOUR_PUBLIC_KEY'
+      ..secreteKey = 'YOUR_SECRETE_KEY';
   
   Transaction transaction = Transaction();
   
